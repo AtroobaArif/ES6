@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //TEMPLATE STRINGS:
+    //Question 1
+    function greetPerson(name, age) {
+      return `My name is ${name} and I am ${age} years old.`;
+    }
+    const name = "Atrooba";
+    const age = 19;
+    console.log(greetPerson(name, age)); 
+    //Question 2
+    function sumAndAverage(numbers) {
+      const sum = numbers.reduce((acc, num) => acc + num, 0);
+      const average = sum / numbers.length;
+      return `Sum: ${sum}, Average: ${average.toFixed(2)}`;
+    }
+    const numberArray = [1, 2, 3, 4, 5];
+    console.log(sumAndAverage(numberArray)); 
+    //Question 3
+    function createHTMLElement(tag, text) {
+      return `<${tag}>${text}</${tag}>`;
+    }
+    const tagName = "h1";
+    const elementText = "Hello, World!";
+    console.log(createHTMLElement(tagName, elementText)); 
+    //Question 4
+    function getProductInfo(product) {
+      return `Product: ${product.name}, Price: $${product.price}, Quantity: ${product.quantity}`;
+    }
+    const productObject = { name: "Widget", price: 9.99, quantity: 10 };
+    console.log(getProductInfo(productObject));
+    //Question 5
+    function formatDate(date) {
+      const day = String(date.getDate()).padStart(2, '0');
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const year = date.getFullYear();
+      return `${day}/${month}/${year}`;
+    }
+    const currentDate = new Date();
+    console.log(formatDate(currentDate)); 
+</script>
+</body>
+</html>

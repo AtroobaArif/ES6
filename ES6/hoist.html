@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /////HOISTING///////
+
+
+///// QUESTION 1///////
+function printVariable() {
+    console.log(myVar); 
+    var myVar = 5;
+    console.log(myVar); 
+  
+  printVariable();
+  
+}
+
+///// QUESTION 2///////
+
+// function printValue() {
+//     let myVar = 'Hello';
+//     console.log(myVar); // Output: Hello
+//   }
+  
+//   printValue();
+//   console.log(myVar); // This will result in an error
+  
+
+
+
+
+///// QUESTION 3///////
+
+// function printValue() {
+//     const myVar = 'Hello';
+//     console.log(myVar); // Output: Hello
+//   }
+  
+//   printValue();
+//   console.log(myVar); 
+  
+
+
+
+///// QUESTION 4///////
+
+// function printValue() {
+//     console.log(undeclaredVar); 
+//   }
+  
+//   printValue();
+  
+
+  //// QUESTION 5///////
+
+function foo() {
+    console.log("Hello from foo!");
+  }
+  
+  function callFoo() {
+    foo(); 
+  }
+  
+  callFoo(); 
+
+
+  
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /////////for of loop///////
+////////question 1/////////
+const fruits = ['Apple', 'Banana', 'Orange', 'Grapes', 'Watermelon'];
+for (const fruit of fruits) {
+  console.log(fruit);
+}
+
+///////question 2//////////
+const message = "Hello, World!";
+for (const character of message) {
+  console.log(character);
+}
+
+//////////question 3/////////
+const person1 = {
+    name: "Atrooba  Arif",
+    age: 19,
+    country: "Pakistan",
+  };
+  for (const property in person1) {
+    if (person1.hasOwnProperty(property)) {
+      console.log(`${property}: ${person1[property]}`);
+    }
+  }
+
+  /////////////question 4///////////
+const person = {
+    name: "Atrooba  Arif",
+    age: 19,
+    country: "Pakistan",
+  };
+  
+  const propertyValues = Object.values(person);
+  for (const value of propertyValues) {
+    console.log(value);
+  }
+  
+  ////////////question 5/////////
+const colors = new Set(['Red', 'Green', 'Blue', 'Yellow', 'Orange']);
+
+for (const color of colors) {
+  console.log(color);
+}
+
+////////////question 6////////////
+
+// a. Create an empty array
+const myArray = [];
+
+// b. Run a loop 10 times, adding a new incrementing value to the array
+for (let i = 1; i <= 10; i++) {
+  myArray.push(i);
+}
+
+// c. Log the array into the console
+console.log("Array contents:", myArray);
+
+// d. Use the for loop to iterate through the array and output into the console
+console.log("Output using for loop:");
+for (let i = 0; i < myArray.length; i++) {
+  console.log(myArray[i]);
+}
+
+// e. Use the for of loop to output the value into the console from the array
+console.log("Output using for...of loop:");
+for (const value of myArray) {
+  console.log(value);
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //DESTRUCTING:
+    //Question 1
+    function sumTwoNumbers(numbers) {
+      const [num1, num2] = numbers;
+      return num1 + num2;
+    }
+    const numbArray = [5, 7];
+    console.log(sumTwoNumbers(numbArray)); 
+    //Question 2
+    function getPersonInfo(person) {
+      const { name, age, occupation } = person;
+      return `Name: ${name}, Age: ${age}, Occupation: ${occupation}`;
+    } 
+    const person = { name: "Atrooba Arif", age: 19, occupation: "Engineer" };
+    console.log(getPersonInfo(person));
+    //Question 3
+    function getHighestScorer(people) {
+      const [highestScorer, ...rest] = people.sort((a, b) => b.score - a.score);
+      return highestScorer.name;
+    }
+    const peopleArray = [
+      { name: "Haya", score: 95 },
+      { name: "Areej", score: 79 },
+      { name: "Firza", score: 56 },
+    ];
+    console.log(getHighestScorer(peopleArray));  
+    //Question 4
+    function getPersonInitials(person) {
+      const { firstName, lastName, middleName = "" } = person;
+      return `${firstName.charAt(0)}${middleName.charAt(0)}${lastName.charAt(0)}`;
+    }
+    const personObject2 = { firstName: "Atrooba", lastName: "Arif" };
+    console.log(getPersonInitials(personObject2)); 
+    //Question 5
+    function getFirstAndLastElements(arr) {
+      const [first, ...rest] = arr;
+      const last = rest.pop();
+      return { first, last };
+    }
+    const stringArray = ["apple", "banana", "cherry", "date"];
+    console.log(getFirstAndLastElements(stringArray));
+</script>
+</body>
+</html>

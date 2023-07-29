@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //LET, VAR & CONST:
+//QUESTION 1
+const pi = 3.14159;
+console.log(pi);
+//QUESTION 2
+function sumOfSquares(numbers) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+      const square = numbers[i] * numbers[i];
+      sum += square;
+    }
+    return sum;
+  }
+  const numbersArray = [1, 2, 3, 4];
+  console.log(sumOfSquares(numbersArray)); 
+//QUESTION 3
+const stringsArray = ["apple", "banana", "cherry"];
+for (let i = 0; i < stringsArray.length; i++) {
+  let firstLetter = stringsArray[i][0];
+  console.log(firstLetter);
+}
+//QUESTION 4
+const ASTERISK = '*';
+function generateAsterisks(n) {
+  return ASTERISK.repeat(n);
+}
+console.log(generateAsterisks(5)); 
+//QUESTION 5
+function generateGreeting(personData) {
+    const greetingMessage = `Hello, my name is ${personData.name} and I am ${personData.age} years old.`;
+    return greetingMessage;
+  }
+
+  const personObject = { name: "Atrooba", age: 19 };
+  console.log(generateGreeting(personObject)); 
+//QUESTION 6
+function findMaxValue(numbers) {
+    let max = Math.max(...numbers);
+    return max;
+  }
+  const numbersArray2 = [10, 5, 7, 25, 15];
+  console.log(findMaxValue(numbersArray2)); 
+</script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //////////// closure ///////////
+        ////////question 1//////////////
+        
+        function counter() {
+            let count = 0; 
+            return function () {
+              count++;
+              console.log(count);
+            };
+          }
+          const incrementCounter1 = counter();
+          const incrementCounter2 = counter();
+          incrementCounter1(); // Output: 1
+          incrementCounter1(); // Output: 2
+          incrementCounter1(); // Output: 3
+          
+          incrementCounter2(); // Output: 1
+          incrementCounter2(); // Output: 2
+        
+          ///////////////question 2/////////
+        
+          function createMultiplier(factor) {
+            return function (number) {
+              return factor * number;
+            };
+          }
+          const multiplyBy5 = createMultiplier(5);
+          console.log(multiplyBy5(10)); 
+          console.log(multiplyBy5(7));  
+        
+          /////////question 3//////////////
+        
+          function secretMessage(secret) {
+            return function (message) {
+              console.log(`Secret Message: ${secret} - ${message}`);
+            };
+          }
+          const revealSecret = secretMessage("I am Atrooba!");
+          revealSecret("Hello, PRETTY!"); 
+          revealSecret("I will protect you."); 
+        
+          ////////////question 4////////////
+        
+          function calculate(num1, num2) {
+            return {
+              add: function () {
+                return num1 + num2;
+              },
+              multiply: function () {
+                return num1 * num2;
+              },
+            };
+          }
+          const calculator = calculate(5, 3);
+          console.log(calculator.add());      
+          console.log(calculator.multiply()); 
+    </script>
+</body>
+</html>

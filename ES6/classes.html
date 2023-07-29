@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    ////  CLASSES //////
+
+  /// QUESTION 2 //////
+
+
+// Step a: Create a class for Person including the constructor for firstname and lastname.
+class Person {
+    constructor(firstName, lastName) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+    }
+  }
+  
+  // Step b: Create a variable and assign a value of the new Person object using your friend's first and last names.
+  const friend1 = new Person('John', 'Doe');
+  
+  // Step c: Now add a second variable with another friend's name using their first name and last name.
+  const friend2 = new Person('Jane', 'Smith');
+  
+  // Step d: Output both friends into the console with a greeting of hello.
+  console.log(`Hello, ${friend1.firstName} ${friend1.lastName}!`);
+  console.log(`Hello, ${friend2.firstName} ${friend2.lastName}!`);
+  
+/// QUESTION 3 //////
+
+// class Person {
+//     constructor(name, age) {
+//       this.name = name;
+//       this.age = age;
+//     }
+  
+//     introduction() {
+//       return `Hi, my name is ${this.name}, and I am ${this.age} years old.`;
+//     }
+//   }
+  
+//   // Test the class
+//   const person1 = new Person('Alice', 25);
+//   console.log(person1.introduction()); // Output: Hi, my name is Alice, and I am 25 years old.
+  
+//   const person2 = new Person('Bob', 30);
+//   console.log(person2.introduction()); // Output: Hi, my name is Bob, and I am 30 years old.
+  
+
+  /// QUESTION 4 //////
+
+  class Rectangle {
+    constructor(width, height) {
+      this.width = width;
+      this.height = height;
+    }
+    getArea() {
+      return this.width * this.height;
+    }
+    getPerimeter() {
+      return 2 * (this.width + this.height);
+    }
+  }
+  const rectangle1 = new Rectangle(5, 10);
+  console.log('Area:', rectangle1.getArea()); 
+  console.log('Perimeter:', rectangle1.getPerimeter()); 
+  
+  const rectangle2 = new Rectangle(7, 3);
+  console.log('Area:', rectangle2.getArea());
+  console.log('Perimeter:', rectangle2.getPerimeter()); 
+  
+/// QUESTION 6 //////
+
+
+class Circle {
+    constructor(radius) {
+      this.radius = radius;
+    }
+    getDiameter() {
+      return 2 * this.radius;
+    }
+    getCircumference() {
+      return 2 * Math.PI * this.radius;
+    }
+    getArea() {
+      return Math.PI * this.radius ** 2;
+    }
+  }
+  const circle1 = new Circle(5);
+  console.log('Diameter:', circle1.getDiameter()); 
+  console.log('Circumference:', circle1.getCircumference()); 
+  console.log('Area:', circle1.getArea()); 
+  
+  const circle2 = new Circle(7);
+  console.log('Diameter:', circle2.getDiameter()); 
+  console.log('Circumference:', circle2.getCircumference()); 
+  console.log('Area:', circle2.getArea()); 
+  
+
+/// QUESTION 6//////
+
+class Person1 {
+    constructor(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+  
+    introduction() {
+      return `Hi, my name is ${this.name}, and I am ${this.age} years old.`;
+    }
+  }
+  
+  class Student extends Person {
+    constructor(name, age, course) {
+      super(name, age);
+      this.course = course;
+    }
+    introduction() {
+      return `Hi, my name is ${this.name}, and I am ${this.age} years old. I am a student studying ${this.course}.`;
+    }
+  }
+  
+  // Test the classes
+  const student1 = new Student('Atrooba', 19, 'Electronic Engineering');
+  console.log(student1.introduction());
+  
+  const student2 = new Student('Zareen', 22, 'Textile');
+  console.log(student2.introduction());
+  
+
+
+
+/// QUESTION 7 //////
+
+class Rectangle1 {
+    constructor(width, height) {
+      this.width = width;
+      this.height = height;
+    }
+    getArea() {
+      return this.width * this.height;
+    }
+    getPerimeter() {
+      return 2 * (this.width + this.height);
+    }
+  }
+  
+  class Square extends Rectangle {
+    constructor(side) {
+      super(side, side);
+    }
+    getArea() {
+      return this.width ** 2;
+    }
+    getPerimeter() {
+      return 4 * this.width;
+    }
+  }
+  const square1 = new Square(5);
+  console.log('Area:', square1.getArea()); 
+  console.log('Perimeter:', square1.getPerimeter()); 
+  const square2 = new Square(7);
+  console.log('Area:', square2.getArea()); 
+  console.log('Perimeter:', square2.getPerimeter()); 
+  
+
+
+</script>
+</body>
+</html>

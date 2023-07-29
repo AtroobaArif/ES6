@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /////  MAPS ///////
+
+/// QUESTION 1//////
+
+const squareMap = (numbers) => {
+    const result = new Map();
+    for (const number of numbers) {
+      const square = number * number;
+      result.set(number, square);
+    }
+  
+    return result;
+  };
+  const numbersArray = [1, 2, 3, 4, 5];
+  const resultMap1 = squareMap(numbersArray);
+  console.log(resultMap1); 
+  
+/// QUESTION 2//////
+
+const mapNamesToAges = (people) => {
+    const result = new Map();
+    for (const person of people) {
+      const { name, age } = person;
+      result.set(name, age);
+    }
+  
+    return result;
+  };
+  const peopleArray = [
+    { name: 'Person1', age: 25 },
+    { name: 'Person2', age: 30 },
+    { name: 'Person3', age: 22 },
+    { name: 'Person4', age: 27 },
+  ];
+  
+  const resultMap = mapNamesToAges(peopleArray);
+  console.log(resultMap);
+  
+  /// QUESTION 3//////
+  
+  const hasKeyInMap = (map, key) => {
+    return map.has(key);
+  };
+  const myMap = new Map([
+    ['a', 1],
+    ['b', 2],
+    ['c', 3],
+  ]);
+  
+  console.log(hasKeyInMap(myMap, 'b')); 
+  console.log(hasKeyInMap(myMap, 'd')); 
+  
+
+/// QUESTION 4//////
+
+const filterMapByCallback = (map, callback) => {
+    const filteredEntries = [...map.entries()].filter(([key, value]) => callback(key, value));
+    const filteredMap = new Map(filteredEntries);
+    return filteredMap;
+  };
+  const myMap1 = new Map([
+    ['apple', 5],
+    ['banana', 10],
+    ['orange', 8],
+    ['grapes', 15],
+  ]);
+  
+  const filteredMap = filterMapByCallback(myMap1, (key, value) => value > 8);
+  console.log(filteredMap);
+  
+  
+
+/// QUESTION 5//////
+
+const mergeMaps = (map1, map2) => {
+    const mergedMap = new Map();
+    for (const [key, value] of map1) {
+      mergedMap.set(key, value);
+    }
+    for (const [key, value] of map2) {
+      mergedMap.set(key, value);
+    }
+  
+    return mergedMap;
+  };
+  const map1 = new Map([
+    ['a', 1],
+    ['b', 2],
+  ]);
+  
+  const map2 = new Map([
+    ['b', 3],
+    ['c', 4],
+  ]);
+  
+  const mergedMap = mergeMaps(map1, map2);
+  console.log(mergedMap);
+  
+  
+
+  
+    </script>
+</body>
+</html>

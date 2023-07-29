@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //////////////for in loop//////////////
+/////////question 1//////////////
+
+// a. Create a simple object with three items in it
+const myObject = {
+    name: "Atrooba",
+    age: 19,
+    country: "Pakistan",
+  };
+  
+  // b. Using the for...in loop, get the properties' names and values from the object
+  //    and output them into the console
+  console.log("Output using for...in loop:");
+  for (const property in myObject) {
+    if (myObject.hasOwnProperty(property)) {
+      console.log(`${property}: ${myObject[property]}`);
+    }
+  }
+  
+  // c. Create an array containing the same three items
+  const myAray = ["John Doe", 30, "United States"];
+  
+  // Using the for loop, output the values from the array into the console
+  console.log("Output using for loop:");
+  for (let i = 0; i < myAray.length; i++) {
+    console.log(myAray[i]);
+  }
+  
+//////////////question 2//////////
+const persn = {
+    name: "Atrooba",
+    age: 19,
+    country: "Pakistan",
+  };
+  for (const property in persn) {
+    if (persn.hasOwnProperty(property)) {
+      console.log(property);
+    }
+  }
+  
+/////////////question 3////////////
+const numbers = [10, 20, 30, 40, 50];
+for (let i = 0; i < numbers.length; i++) {
+  console.log(i);
+}
+
+////////question 4////////////
+const mesage = "Hello, World!";
+for (const index in mesage) {
+  console.log(mesage[index]);
+}
+
+////////////question 5///////////
+const scores = new Map([
+    ['HAYA', 85],
+    ['AREEJ', 92],
+    ['FIRZA', 78],
+  ]);
+  for (const [name, score] of scores) {
+    console.log(`${name}: ${score}`);
+  }
+
+  /////////question 6/////////////
+const car = {
+    brand: "Toyota",
+    model: "Corolla",
+    year: 2022,
+  };
+  
+  for (const property in car) {
+    if (car.hasOwnProperty(property)) {
+      console.log(car[property]);
+    }
+  }
+
+ 
+    </script>
+</body>
+</html>

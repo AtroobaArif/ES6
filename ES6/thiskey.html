@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        ///// THIS KEY WORD /////
+
+
+//// QUESTION 1///////
+
+const person = {
+    name: "Atrooba",
+    greet: function() {
+      console.log(`Hello, my name is ${this.name}.`);
+    }
+  };
+  
+  person.greet(); 
+  
+
+
+//// QUESTION 2///////
+
+function Car(brand) {
+    this.brand = brand;
+    this.speed = 0;
+  
+    this.accelerate = function(value) {
+      this.speed += value;
+    };
+  
+    this.printSpeed = function() {
+      console.log(`Current speed of ${this.brand} car: ${this.speed} km/h`);
+    };
+  }
+  
+  const myCar = new Car("Toyota");
+  myCar.accelerate(30);
+  myCar.printSpeed(); 
+  
+  myCar.accelerate(20);
+  myCar.printSpeed();
+  
+
+
+//// QUESTION 3///////
+
+const calculator = {
+    value: 0,
+  
+    add: function(num) {
+      this.value += num;
+    },
+  
+    subtract: function(num) {
+      this.value -= num;
+    },
+  
+    multiply: function(num) {
+      this.value *= num;
+    },
+  
+    printValue: function() {
+      console.log(`Current value: ${this.value}`);
+    }
+  };
+  calculator.add(10);
+  calculator.printValue(); 
+  
+  calculator.subtract(5);
+  calculator.printValue(); 
+  
+  calculator.multiply(2);
+  calculator.printValue(); 
+
+//// QUESTION 4///////
+const calculator1 = {
+    value: 0,
+  
+    add: function(num) {
+      this.value += num;
+    },
+  
+    subtract: function(num) {
+      this.value -= num;
+    },
+  
+    multiply: function(num) {
+      this.value *= num;
+    },
+  
+    printValue: function() {
+      console.log(`Current value: ${this.value}`);
+    }
+  };
+  calculator.add(10);
+  calculator.printValue(); 
+  calculator.subtract(5);
+  calculator.printValue(); 
+  
+  calculator.multiply(2);
+  calculator.printValue(); 
+  
+
+//// QUESTION 5///////
+
+const book = {
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    pages: 180,
+  
+    printInfo: function() {
+      console.log(`Title: ${this.title}`);
+      console.log(`Author: ${this.author}`);
+      console.log(`Number of Pages: ${this.pages}`);
+    }
+  };
+  book.printInfo();
+  
+
+
+
+
+//// QUESTION 6///////
+
+
+const counter = {
+    count: 0,
+  
+    increment: function() {
+      this.count += 1;
+    },
+  
+    reset: function() {
+      this.count = 0;
+    }
+  };
+  counter.increment();
+  console.log(counter.count); 
+  
+  counter.increment();
+  console.log(counter.count); 
+  
+  counter.reset();
+  console.log(counter.count); 
+  
+
+
+//// QUESTION 7///////
+
+const product = {
+    name: "Laptop",
+    price: 1000,
+    discount: 0.1, 
+  
+    calculateDiscountedPrice: function() {
+      return this.price - (this.price * this.discount);
+    }
+  };
+  const discountedPrice = product.calculateDiscountedPrice();
+  console.log(discountedPrice); 
+  
+
+
+//// QUESTION 8///////
+
+const game = {
+    playerName: "John",
+    score: 0,
+  
+    play() {
+      console.log(`${this.playerName} is playing the game.`);
+      this.score += 10;
+      console.log(`Score: ${this.score}`);
+    }
+  };
+  
+  game.play();
+    </script>
+</body>
+</html>
